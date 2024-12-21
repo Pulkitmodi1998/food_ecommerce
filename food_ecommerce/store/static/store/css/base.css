@@ -1,0 +1,143 @@
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+.bg-light {
+    background-color: #0b0b0c !important;
+}
+.fa-brands, .fab {
+    color: white;
+}
+.navbar-toggler-icon {
+    background-color: #dd0c0c;
+    border-radius: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: #e00404;
+    font-weight: bold;
+    padding-left: 80px;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: #ffc107;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffc107;
+}
+
+.navbar-brand {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+footer {
+    margin-top: 101px;
+    background-color: #f8f9fa;
+    padding: 60px 0; /* Increase top and bottom padding */
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #0056b3;
+}
+
+/* General Header and Footer Styling for Responsiveness */
+header, footer {
+    width: 100%;
+}
+
+/* Mobile Screen (max-width: 576px) */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    .dropdown-menu {
+        text-align: center;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+    footer .social-icons i {
+        margin: 0 5px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablet Screen (576px to 992px) */
+@media (min-width: 576px) and (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .dropdown-menu {
+        text-align: right;
+    }
+
+    footer {
+        font-size: 12px;
+        margin-top: 66px;
+    }
+
+    footer .social-icons i {
+        margin: 0px 10px;
+        font-size: 1.5rem;
+    }
+}
+

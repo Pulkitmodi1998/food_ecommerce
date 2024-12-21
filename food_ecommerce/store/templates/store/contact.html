@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{% static 'store\css\contact.css' %}">
+        <link rel="stylesheet" href="{% static 'store\css\base.css' %}">
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();  // Prevent page reload
+            document.getElementById('submitMessage').style.display = 'block';  // Show thank-you message
+        }
+    </script>
+</head>
+<body>
+
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'index' %}">EatsStreet</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'feedback' %}">Feedback</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user"></i> Account
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        {% if user.is_authenticated %}
+                        <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <form method="post" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="dropdown-item">Logout</button>
+                        </form>
+                        {% else %}
+                        <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                        <a class="dropdown-item" href="{% url 'signup' %}">Signup</a>
+                        {% endif %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="contact-header">
+        <h1>How Can We Help?</h1>
+        <p>Send us a text: 1-814-251-9966</p>
+        <p>Give us a call: 1-888-963-8944</p>
+        <p>Sunday - Saturday: 5AM - 5PM PST</p>
+
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h3>Frequently Asked Questions</h3>
+        <form class="faq-form" onsubmit="handleFormSubmit(event)">
+            <input type="text" placeholder="What can we help you with?" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="submitMessage" class="submit-message">Thank you! Your question has been submitted. We will get back to you ASAP !</div>
+
+        <div class="faq-category">
+            <h5>Order & Delivery</h5>
+            <ul>
+                <li>How long does it take for my order to arrive?</li>
+                <li>What are the delivery charges for my area?</li>
+                <li>Can I track my order in real-time?</li>
+                <li>What happens if I am not home during delivery?</li>
+            </ul>
+        </div>
+
+        <div class="faq-category">
+            <h5>Payments & Refunds</h5>
+            <ul>
+                <li>What payment methods do you accept?</li>
+                <li>How do I request a refund?</li>
+                <li>Can I use multiple coupons in one order?</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3 footer">
+        <p>Contact us: <a href="mailto:contact@foodecommerce.com">EatsStreet@gmail.com</a></p>
+        <p>Mobile No:  1-888-963-8944</p>
+        <div>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

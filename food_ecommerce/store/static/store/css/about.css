@@ -1,0 +1,88 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+.background {
+    background-image: url("../images/back1.jpeg");
+    height: 100%; /* Adjusted to viewport height */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.h2, h2 {
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+.main-content {
+    margin: 58px auto;
+    padding: 20px;
+    background-color: #b3a885;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e00404;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.chef-review {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 15px 50px;
+    background-color: #ced4da;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chef-review img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 3px solid #e00404;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-content h4 {
+    font-size: 1.5rem;
+    color: #e00404;
+    margin-bottom: 10px;
+}
+
+.review-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.stars {
+    margin-top: 10px;
+}
+
+.stars i {
+    font-size: 1.2rem;
+    color: #ffc107;
+    margin-right: 5px;
+}

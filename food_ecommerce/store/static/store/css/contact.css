@@ -1,0 +1,144 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.py-3 {
+    padding: 1rem !important;
+    margin-top: 31px;
+}
+
+.bg-light {
+    background-color: black !important;
+    color: white;
+}
+.contact-header .fa-brands, .fab {
+    color: white;
+    font-size: 40px;
+    margin: 10px;
+    margin-bottom: -10px;
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    padding-left: 80px;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    padding-left: 40px;
+    /* Add space between links */
+    padding-right: 40px;
+    /* Add space between links */
+}
+
+.navbar-brand {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.navbar-brand:hover {
+    color: #ff8585;
+}
+
+.py-3 {
+    padding: 1rem !important;
+    margin-top: 80px;
+}
+
+.contact-header {
+    background-color: brown;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.faq-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.faq-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+    width: 100%;
+}
+
+.faq-form input {
+    flex: 1;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.faq-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faq-form button:hover {
+    background-color: #0056b3;
+}
+
+.submit-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+    display: none;
+}
+
+.faq-category {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+    margin: 10px;
+    vertical-align: top;
+    margin-top: 100px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    /* Increase top and bottom padding */
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #0056b3;
+}

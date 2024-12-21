@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'store\css\product_detail.css' %}">
+        <link rel="stylesheet" href="{% static 'store\css\base.css' %}">
+</head>
+<body>
+    <div class="bg">
+    <div class="container product-container">
+        <h1>{{ product.name }}</h1>
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width:100%; height:auto;">
+        <p><strong>Price:</strong> £{{ product.price }}</p>
+        <p><b>Product Description:</b> {{ product.description }}</p>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
